@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+
+namespace Task7
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int quantityOfGold;
+            int remainingGold;
+            int wantСrystals;
+            int crystalPrice = 10;
+
+            Console.WriteLine("Количество вашего золота: ");
+            quantityOfGold = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine($"Сколько вы хотите купить кристаллов по цене {crystalPrice}");
+            wantСrystals = Convert.ToInt32(Console.ReadLine());
+            remainingGold = quantityOfGold - (wantСrystals * crystalPrice);
+            Console.WriteLine($"Ваше количесво оставшегося золота: {remainingGold}, купленных кристаллов {wantСrystals}");
+            Console.ReadKey();
+        }
+    }
+}
