@@ -11,7 +11,6 @@ namespace Task7
         static void Main(string[] args)
         {
             int quantityOfGold;
-            int remainingGold;
             int wantСrystals;
             int crystalPrice = 10;
 
@@ -19,8 +18,8 @@ namespace Task7
             quantityOfGold = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine($"Сколько вы хотите купить кристаллов по цене {crystalPrice}");
             wantСrystals = Convert.ToInt32(Console.ReadLine());
-            remainingGold = quantityOfGold - (wantСrystals * crystalPrice);
-            Console.WriteLine($"Ваше количесво оставшегося золота: {remainingGold}, купленных кристаллов {wantСrystals}");
+            quantityOfGold -= wantСrystals * crystalPrice;
+            Console.WriteLine($"Ваше количесво оставшегося золота: {quantityOfGold}, купленных кристаллов {wantСrystals}");
             Console.ReadKey();
         }
     }
